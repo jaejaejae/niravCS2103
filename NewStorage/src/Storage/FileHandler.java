@@ -30,12 +30,9 @@ public class FileHandler
 			System.out.println("File Not Found!");
 		}
 	}
-	public void readObject(TaskHashMap instance) throws FileNotFoundException, ArrayIndexOutOfBoundsException
+	public TaskHashMap readObject() throws FileNotFoundException, ArrayIndexOutOfBoundsException
 	{
-		if(instance.getKeySet().size()!=0)
-		{
-		instance =new TaskHashMap();
-		}
+		TaskHashMap instance =new TaskHashMap();
 		BufferedInputStream xmlIn=new BufferedInputStream(new FileInputStream(fileName));
 		XMLDecoder readFromXml=new XMLDecoder(xmlIn);
 		try
@@ -43,18 +40,21 @@ public class FileHandler
 			Task obj;
 			while((obj=(Task)readFromXml.readObject())!=null)
 			{
-				instance.setTaskById(obj);
-				
+				System.out.println("in while loop");
+				instance.addTaskById(obj);
 			}
+			//System.out.println(instance.getKeySet().size());
 			readFromXml.close();
 		}
 		catch(ArrayIndexOutOfBoundsException e)
 		{
-			
+			return null;
 		}
 		catch(NullPointerException e)
 		{
-			
+			return null;
 		}
+		
+		return instance;
 	}
 }

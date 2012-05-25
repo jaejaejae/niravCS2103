@@ -54,9 +54,11 @@ public class TaskHashMap
 	{
 		return taskList.get(id);
 	}
-	public void setTaskById(Task taskToBeAdded)
+	public void addTaskById(Task taskToBeAdded)
 	{
+		System.out.println("In addTaskById");
 		taskList.put(taskToBeAdded.getTaskId(), taskToBeAdded);
+		
 	}
 	public Set<String> getKeySet()
 	{

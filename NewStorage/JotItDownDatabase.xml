@@ -2,26 +2,10 @@
 <java version="1.6.0_31" class="java.beans.XMLDecoder"> 
  <object class="Storage.Task"> 
   <void property="description"> 
-   <string>near Alkameen</string> 
+   <string>with Parents</string> 
   </void> 
   <void property="endDateTime"> 
    <object id="DateTime0" class="Storage.DateTime"> 
-    <void property="hasTime"> 
-     <boolean>true</boolean> 
-    </void> 
-    <void property="timeMilli"> 
-     <long>1340697600000</long> 
-    </void> 
-   </object> 
-  </void> 
-  <void property="name"> 
-   <string>Going to saloon</string> 
-  </void> 
-  <void property="recurring"> 
-   <string>weekly</string> 
-  </void> 
-  <void property="startDateTime"> 
-   <object id="DateTime1" class="Storage.DateTime"> 
     <void property="hasTime"> 
      <boolean>true</boolean> 
     </void> 
@@ -30,17 +14,6 @@
     </void> 
    </object> 
   </void> 
-  <void property="taskId"> 
-   <string>2652012400Q</string> 
-  </void> 
- </object> 
- <object class="Storage.Task"> 
-  <void property="description"> 
-   <string>with Parents</string> 
-  </void> 
-  <void property="endDateTime"> 
-   <object idref="DateTime1"/> 
-  </void> 
   <void property="name"> 
    <string>Going to doctor</string> 
   </void> 
@@ -48,10 +21,37 @@
    <string>monthly</string> 
   </void> 
   <void property="startDateTime"> 
+   <object id="DateTime1" class="Storage.DateTime"> 
+    <void property="hasTime"> 
+     <boolean>true</boolean> 
+    </void> 
+    <void property="timeMilli"> 
+     <long>1340697600000</long> 
+    </void> 
+   </object> 
+  </void> 
+  <void property="taskId"> 
+   <string>2652012300U</string> 
+  </void> 
+ </object> 
+ <object class="Storage.Task"> 
+  <void property="description"> 
+   <string>near Alkameen</string> 
+  </void> 
+  <void property="endDateTime"> 
+   <object idref="DateTime1"/> 
+  </void> 
+  <void property="name"> 
+   <string>Going to saloon</string> 
+  </void> 
+  <void property="recurring"> 
+   <string>weekly</string> 
+  </void> 
+  <void property="startDateTime"> 
    <object idref="DateTime0"/> 
   </void> 
   <void property="taskId"> 
-   <string>2652012300G</string> 
+   <string>2652012400O</string> 
   </void> 
  </object> 
  <object class="Storage.Task"> 
@@ -82,7 +82,7 @@
    </object> 
   </void> 
   <void property="taskId"> 
-   <string>2852012400R</string> 
+   <string>2852012400I</string> 
   </void> 
  </object> 
 </java> 
