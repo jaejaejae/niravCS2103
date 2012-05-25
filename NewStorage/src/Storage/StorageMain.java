@@ -15,11 +15,9 @@ public static void main(String args[]) throws FileNotFoundException
 	map.addTask(one);
 	map.addTask(two);
 	map.addTask(three);
-	
 	FileHandler handle=new FileHandler("JotItDownDataBase.xml");
-	handle.writeObject(map);
-	TaskHashMap map2=handle.readObject();
-	for(String key:map2.getKeySet())
+	handle.readFromFile(map);
+	for(String key:map.getKeySet())
 		System.out.println(key);
 }
 

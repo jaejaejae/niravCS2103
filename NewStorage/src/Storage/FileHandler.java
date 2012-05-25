@@ -13,7 +13,7 @@ public class FileHandler
 	{
 		fileName=name;
 	}
-	public void writeObject(TaskHashMap instance) throws FileNotFoundException
+	public boolean writeToFile(TaskHashMap instance) throws FileNotFoundException
 	{
 		try
 		{
@@ -24,15 +24,16 @@ public class FileHandler
 			writeToXml.writeObject(instance.getTaskById(key));
 		}
 		writeToXml.close();
+		return true;
 		}
 		catch(FileNotFoundException e)
 		{
 			System.out.println("File Not Found!");
+			return false;
 		}
 	}
-	public TaskHashMap readObject() throws FileNotFoundException, ArrayIndexOutOfBoundsException
+	public void readFromFile(TaskHashMap instance) throws FileNotFoundException, ArrayIndexOutOfBoundsException
 	{
-		TaskHashMap instance =new TaskHashMap();
 		BufferedInputStream xmlIn=new BufferedInputStream(new FileInputStream(fileName));
 		XMLDecoder readFromXml=new XMLDecoder(xmlIn);
 		try
@@ -40,21 +41,17 @@ public class FileHandler
 			Task obj;
 			while((obj=(Task)readFromXml.readObject())!=null)
 			{
-				System.out.println("in while loop");
 				instance.addTaskById(obj);
 			}
-			//System.out.println(instance.getKeySet().size());
 			readFromXml.close();
 		}
 		catch(ArrayIndexOutOfBoundsException e)
 		{
-			return null;
+			
 		}
 		catch(NullPointerException e)
 		{
-			return null;
+			
 		}
-		
-		return instance;
 	}
 }

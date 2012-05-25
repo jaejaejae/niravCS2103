@@ -41,7 +41,7 @@ public class TaskHashMap
 		assert(taskToRemove!=null);
 		taskList.remove(taskToRemove.getTaskId());
 	}
-	public void deleteTask(String key)
+	public void deleteTaskById(String key)
 	{
 		taskList.remove(key);
 	}
@@ -63,5 +63,9 @@ public class TaskHashMap
 	public Set<String> getKeySet()
 	{
 		return taskList.keySet();
+	}
+	public void clearHashMap()
+	{
+		taskList.clear();
 	}
 }
