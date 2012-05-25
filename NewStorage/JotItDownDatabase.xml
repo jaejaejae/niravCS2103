@@ -5,7 +5,7 @@
    <string>with Parents</string> 
   </void> 
   <void property="endDateTime"> 
-   <object id="DateTime0" class="Storage.DateTime"> 
+   <object class="Storage.DateTime"> 
     <void property="hasTime"> 
      <boolean>true</boolean> 
     </void> 
@@ -21,7 +21,7 @@
    <string>monthly</string> 
   </void> 
   <void property="startDateTime"> 
-   <object id="DateTime1" class="Storage.DateTime"> 
+   <object class="Storage.DateTime"> 
     <void property="hasTime"> 
      <boolean>true</boolean> 
     </void> 
@@ -31,27 +31,7 @@
    </object> 
   </void> 
   <void property="taskId"> 
-   <string>2652012300U</string> 
-  </void> 
- </object> 
- <object class="Storage.Task"> 
-  <void property="description"> 
-   <string>near Alkameen</string> 
-  </void> 
-  <void property="endDateTime"> 
-   <object idref="DateTime1"/> 
-  </void> 
-  <void property="name"> 
-   <string>Going to saloon</string> 
-  </void> 
-  <void property="recurring"> 
-   <string>weekly</string> 
-  </void> 
-  <void property="startDateTime"> 
-   <object idref="DateTime0"/> 
-  </void> 
-  <void property="taskId"> 
-   <string>2652012400O</string> 
+   <string>2652012300F</string> 
   </void> 
  </object> 
  <object class="Storage.Task"> 
@@ -82,7 +62,41 @@
    </object> 
   </void> 
   <void property="taskId"> 
-   <string>2852012400I</string> 
+   <string>2852012400B</string> 
+  </void> 
+ </object> 
+ <object class="Storage.Task"> 
+  <void property="description"> 
+   <string>Project meeting</string> 
+  </void> 
+  <void property="endDateTime"> 
+   <object class="Storage.DateTime"> 
+    <void property="hasTime"> 
+     <boolean>true</boolean> 
+    </void> 
+    <void property="timeMilli"> 
+     <long>1340953200000</long> 
+    </void> 
+   </object> 
+  </void> 
+  <void property="name"> 
+   <string>Going to tutorial</string> 
+  </void> 
+  <void property="recurring"> 
+   <string>daily</string> 
+  </void> 
+  <void property="startDateTime"> 
+   <object class="Storage.DateTime"> 
+    <void property="hasTime"> 
+     <boolean>true</boolean> 
+    </void> 
+    <void property="timeMilli"> 
+     <long>1340863200000</long> 
+    </void> 
+   </object> 
+  </void> 
+  <void property="taskId"> 
+   <string>2952012300O</string> 
   </void> 
  </object> 
 </java> 

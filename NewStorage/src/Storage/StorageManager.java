@@ -25,7 +25,7 @@ public class StorageManager
 		ArrayList<Task> tasks=new ArrayList<Task>();
 		for(String key: liveStorage.getKeySet())
 		tasks.add(liveStorage.getTaskById(key));
-		Task[] taskArray=new Task[3];
+		Task[] taskArray=new Task[tasks.size()];
 		tasks.toArray(taskArray);
 		return taskArray;
 	}	
@@ -52,11 +52,12 @@ public class StorageManager
 	}
 	public void exportToTxt(String fileName) throws FileNotFoundException
 	{
-		FileHandler handler=new FileHandler("JotItDownDataBase.txt");
+		FileHandler handler=new FileHandler(fileName);
 		handler.writeToFile(liveStorage);
 	}
 	public void deleteTask(String id)
 	{
+		System.out.println("YOLO");
 		liveStorage.deleteTaskById(id);
 	}
 	public void saveArchive()
