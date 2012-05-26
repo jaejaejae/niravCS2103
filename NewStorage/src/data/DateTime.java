@@ -164,14 +164,14 @@ public String formattedToString()
 }
 public String generateDateCode()
 {
-	return String.format("%d%d%d",this.calendar.get(GregorianCalendar.DAY_OF_MONTH),this.calendar.get(GregorianCalendar.MONTH),this.calendar.get(GregorianCalendar.YEAR));
+	return DAY_MONTH_YEAR.format(this.calendar.getTimeInMillis());
 }
 public String generateTimeCode()
 {
 	if(hasTime)
-		return String.format("%d%d%d", this.calendar.get(GregorianCalendar.HOUR),this.calendar.get(GregorianCalendar.MINUTE),this.calendar.get(GregorianCalendar.SECOND));
-	else 
-		return String.format("%d%d%d", 23,59,59);
+		return String.format("%02d%02d%02d", this.calendar.get(GregorianCalendar.HOUR_OF_DAY),this.calendar.get(GregorianCalendar.MINUTE),this.calendar.get(GregorianCalendar.SECOND));
+	else
+		return "";
 }
 public boolean isDefaultTime()
 {

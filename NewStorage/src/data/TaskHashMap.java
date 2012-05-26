@@ -19,13 +19,14 @@ public class TaskHashMap
 	 */
 	public boolean addTask(Task taskToBeAdded)
 	{
-		assert(taskToBeAdded!=null);
+	
+		if(taskToBeAdded==null)
+			return false;
 		taskToBeAdded.setTaskId(generateUniqueId(taskToBeAdded));
-		
 		taskList.put(taskToBeAdded.getTaskId(), taskToBeAdded);
 		return true;
 	}
-	private String generateUniqueId(Task taskToBeAdded)
+	public String generateUniqueId(Task taskToBeAdded)
 	{
 		String taskId;
 		Random random=new Random();
@@ -36,14 +37,22 @@ public class TaskHashMap
 	 * 
 	 * @param taskId id of the task to be deleted
 	 */
-	public void deleteTask(Task taskToRemove)
+	public boolean deleteTask(Task taskToRemove)
 	{
-		assert(taskToRemove!=null);
+		if(taskToRemove==null)
+			return false;
 		taskList.remove(taskToRemove.getTaskId());
+		return true;
 	}
-	public void deleteTaskById(String key)
+	public boolean deleteTaskById(String key)
 	{
-		taskList.remove(key);
+		if(taskList.keySet().contains(key))
+		{
+			taskList.remove(key);
+			return true;
+		}
+		else
+			return false;
 	}
 	/** Member function to get task
 	 * 

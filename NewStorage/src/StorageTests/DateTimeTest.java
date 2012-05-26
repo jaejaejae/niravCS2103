@@ -34,12 +34,13 @@ public class DateTimeTest {
 
 	@Test
 	public final void testIsDefaultTime() {
-		fail("Not yet implemented"); // TODO
+		assertEquals(false,yesterday.isDefaultTime());
 	}
 
 	@Test
 	public final void testSetIntInt() {
-		fail("Not yet implemented"); // TODO
+		yesterday.set(1,2011);
+		assertEquals("25-05-2011",yesterday.getDate().formattedToString());
 	}
 
 }

@@ -13,13 +13,15 @@ public class StorageManager
 		liveStorage=new TaskHashMap();
 	}
 	
-	public void addTask(Task taskToBeAdded)
+	public boolean addTask(Task taskToBeAdded)
 	{
-		liveStorage.addTask(taskToBeAdded);
+		return liveStorage.addTask(taskToBeAdded);
+		
 	}
-	public void deleteTask(Task taskToBeRemoved)
+	public boolean deleteTask(Task taskToBeRemoved)
 	{
-		liveStorage.deleteTask(taskToBeRemoved);
+		return liveStorage.deleteTask(taskToBeRemoved);
+			
 	}
 	public Task[] getAllTasks()
 	{
@@ -39,10 +41,7 @@ public class StorageManager
 		FileHandler handler=new FileHandler("JotItDownDatabase.xml");
 		if(liveStorage.getKeySet().size()!=0)
 			liveStorage.clearHashMap();
-		if(handler.readFromFile(liveStorage))
-			return true;
-		else 
-			return false;
+		return handler.readFromFile(liveStorage);
 	}
 	public boolean saveFile() throws FileNotFoundException
 	{
@@ -52,27 +51,26 @@ public class StorageManager
 	else 
 		return false;
 	}
-	public void replaceTask(Task taskToBeReplaced,Task taskToReplaceBy)
+	public boolean replaceTask(Task taskToBeReplaced,Task taskToReplaceBy)
 	{
-		liveStorage.deleteTask(taskToBeReplaced);
-		liveStorage.addTask(taskToReplaceBy);
+		return ((liveStorage.deleteTask(taskToBeReplaced)) && (liveStorage.addTask(taskToReplaceBy)));
 	}
 	public void exportToTxt(String fileName) throws FileNotFoundException
 	{
 		FileHandler handler=new FileHandler(fileName);
 		handler.writeToFile(liveStorage);
 	}
-	public void deleteTask(String id)
+	public boolean deleteTask(String id)
 	{
-		liveStorage.deleteTaskById(id);
+		return liveStorage.deleteTaskById(id);
 	}
-	public void saveArchive()
+	public boolean saveArchive()
 	{
-		
+		return false;
 	}
-	public void clearArchive()
+	public boolean clearArchive()
 	{
-		
+		return false;
 	}
 }
 
