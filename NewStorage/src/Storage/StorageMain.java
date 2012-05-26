@@ -32,10 +32,6 @@ public static void main(String args[]) throws FileNotFoundException
 	manager.loadFile();
 	Task[] tasks1=manager.getAllTasks();
 	System.out.println(tasks1.length);
-	for(int i=0;i<tasks1.length;i++)
-	{
-		System.out.println(tasks1[i].getEndDateTime().formattedToString());
-	}
 }
 
 }

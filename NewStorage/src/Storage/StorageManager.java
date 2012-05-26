@@ -21,7 +21,6 @@ public class StorageManager
 	}
 	public Task[] getAllTasks()
 	{
-		int size=liveStorage.getKeySet().size();
 		ArrayList<Task> tasks=new ArrayList<Task>();
 		for(String key: liveStorage.getKeySet())
 		tasks.add(liveStorage.getTaskById(key));
@@ -33,17 +32,23 @@ public class StorageManager
 	{
 		return liveStorage.getTaskById(id);
 	}
-	public void loadFile() throws ArrayIndexOutOfBoundsException, FileNotFoundException
+	public boolean loadFile() throws ArrayIndexOutOfBoundsException, FileNotFoundException
 	{
 		FileHandler handler=new FileHandler("JotItDownDatabase.xml");
 		if(liveStorage.getKeySet().size()!=0)
 			liveStorage.clearHashMap();
-		handler.readFromFile(liveStorage);
+		if(handler.readFromFile(liveStorage))
+			return true;
+		else 
+			return false;
 	}
-	public void saveFile() throws FileNotFoundException
+	public boolean saveFile() throws FileNotFoundException
 	{
 	FileHandler handler=new FileHandler("JotItDownDatabase.xml");
-	handler.writeToFile(liveStorage);
+	if(handler.writeToFile(liveStorage))
+		return true;
+	else 
+		return false;
 	}
 	public void replaceTask(Task taskToBeReplaced,Task taskToReplaceBy)
 	{
@@ -57,7 +62,6 @@ public class StorageManager
 	}
 	public void deleteTask(String id)
 	{
-		System.out.println("YOLO");
 		liveStorage.deleteTaskById(id);
 	}
 	public void saveArchive()

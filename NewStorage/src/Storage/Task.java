@@ -171,7 +171,7 @@ public void toggleImportant()
 /** mark the Task as completed or unimportant*/
 public void toggleCompleted()
 {
-	completed = !important;
+	completed = !completed;
 }
 public void toggleDeadline()
 {

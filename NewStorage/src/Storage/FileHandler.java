@@ -32,7 +32,7 @@ public class FileHandler
 			return false;
 		}
 	}
-	public void readFromFile(TaskHashMap instance) throws FileNotFoundException, ArrayIndexOutOfBoundsException
+	public boolean readFromFile(TaskHashMap instance) throws FileNotFoundException, ArrayIndexOutOfBoundsException
 	{
 		BufferedInputStream xmlIn=new BufferedInputStream(new FileInputStream(fileName));
 		XMLDecoder readFromXml=new XMLDecoder(xmlIn);
@@ -47,11 +47,12 @@ public class FileHandler
 		}
 		catch(ArrayIndexOutOfBoundsException e)
 		{
-			
+			return false;
 		}
 		catch(NullPointerException e)
 		{
-			
+			return false;
 		}
+		return true;
 	}
 }

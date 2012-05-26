@@ -2,26 +2,10 @@
 <java version="1.6.0_31" class="java.beans.XMLDecoder"> 
  <object class="Storage.Task"> 
   <void property="description"> 
-   <string>with Parents</string> 
+   <string>near Alkameen</string> 
   </void> 
   <void property="endDateTime"> 
    <object id="DateTime0" class="Storage.DateTime"> 
-    <void property="hasTime"> 
-     <boolean>true</boolean> 
-    </void> 
-    <void property="timeMilli"> 
-     <long>1340694000000</long> 
-    </void> 
-   </object> 
-  </void> 
-  <void property="name"> 
-   <string>Going to doctor</string> 
-  </void> 
-  <void property="recurring"> 
-   <string>monthly</string> 
-  </void> 
-  <void property="startDateTime"> 
-   <object id="DateTime1" class="Storage.DateTime"> 
     <void property="hasTime"> 
      <boolean>true</boolean> 
     </void> 
@@ -30,17 +14,6 @@
     </void> 
    </object> 
   </void> 
-  <void property="taskId"> 
-   <string>2652012300F</string> 
-  </void> 
- </object> 
- <object class="Storage.Task"> 
-  <void property="description"> 
-   <string>near Alkameen</string> 
-  </void> 
-  <void property="endDateTime"> 
-   <object idref="DateTime1"/> 
-  </void> 
   <void property="name"> 
    <string>Going to saloon</string> 
   </void> 
@@ -48,41 +21,37 @@
    <string>weekly</string> 
   </void> 
   <void property="startDateTime"> 
-   <object idref="DateTime0"/> 
+   <object id="DateTime1" class="Storage.DateTime"> 
+    <void property="hasTime"> 
+     <boolean>true</boolean> 
+    </void> 
+    <void property="timeMilli"> 
+     <long>1340694000000</long> 
+    </void> 
+   </object> 
   </void> 
   <void property="taskId"> 
-   <string>2652012400O</string> 
+   <string>2652012400C</string> 
   </void> 
  </object> 
  <object class="Storage.Task"> 
   <void property="description"> 
-   <string>CS2103</string> 
+   <string>with Parents</string> 
   </void> 
   <void property="endDateTime"> 
-   <object class="Storage.DateTime"> 
-    <void property="hasTime"> 
-     <boolean>true</boolean> 
-    </void> 
-    <void property="timeMilli"> 
-     <long>1340870400000</long> 
-    </void> 
-   </object> 
+   <object idref="DateTime1"/> 
   </void> 
   <void property="name"> 
-   <string>Going to lecture</string> 
+   <string>Going to doctor</string> 
+  </void> 
+  <void property="recurring"> 
+   <string>monthly</string> 
   </void> 
   <void property="startDateTime"> 
-   <object class="Storage.DateTime"> 
-    <void property="hasTime"> 
-     <boolean>true</boolean> 
-    </void> 
-    <void property="timeMilli"> 
-     <long>1340863200000</long> 
-    </void> 
-   </object> 
+   <object idref="DateTime0"/> 
   </void> 
   <void property="taskId"> 
-   <string>2852012400B</string> 
+   <string>2652012300F</string> 
   </void> 
  </object> 
  <object class="Storage.Task"> 
@@ -117,6 +86,37 @@
   </void> 
   <void property="taskId"> 
    <string>2952012300O</string> 
+  </void> 
+ </object> 
+ <object class="Storage.Task"> 
+  <void property="description"> 
+   <string>CS2103</string> 
+  </void> 
+  <void property="endDateTime"> 
+   <object class="Storage.DateTime"> 
+    <void property="hasTime"> 
+     <boolean>true</boolean> 
+    </void> 
+    <void property="timeMilli"> 
+     <long>1340870400000</long> 
+    </void> 
+   </object> 
+  </void> 
+  <void property="name"> 
+   <string>Going to lecture</string> 
+  </void> 
+  <void property="startDateTime"> 
+   <object class="Storage.DateTime"> 
+    <void property="hasTime"> 
+     <boolean>true</boolean> 
+    </void> 
+    <void property="timeMilli"> 
+     <long>1340863200000</long> 
+    </void> 
+   </object> 
+  </void> 
+  <void property="taskId"> 
+   <string>2852012400J</string> 
   </void> 
  </object> 
 </java> 

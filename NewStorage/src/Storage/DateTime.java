@@ -58,13 +58,21 @@ public DateTime(int year,int month,int day,int hours,int minutes,int seconds)
 	timeMilli=calendar.getTimeInMillis();
 	hasTime=true;
 }
-public DateTime getCurrentDateTime()
+public static DateTime getCurrentDateTime()
 {
 	GregorianCalendar current=new GregorianCalendar();
 	current.setLenient(false);
 	current.getTimeInMillis();
 	DateTime currDateTime=new DateTime(current.get(GregorianCalendar.YEAR),(current.get(GregorianCalendar.MONTH))+1,current.get(GregorianCalendar.DAY_OF_MONTH),current.get(GregorianCalendar.HOUR_OF_DAY),current.get(GregorianCalendar.MINUTE),current.get(GregorianCalendar.SECOND));
 	return currDateTime;
+}
+public static DateTime getCurrentDate()
+{
+	GregorianCalendar current=new GregorianCalendar();
+	current.setLenient(false);
+	current.getTimeInMillis();
+	DateTime currDate=new DateTime(current.get(GregorianCalendar.YEAR),current.get(GregorianCalendar.MONTH)+1,current.get(GregorianCalendar.DAY_OF_MONTH));
+	return currDate;
 }
 public void set(int year,int month,int day)
 {
@@ -124,6 +132,15 @@ public int compareTo(DateTime second)
 	else
 		return 1;
 }
+/** COMPONENT		VALUE
+ * 		0			 ERA
+ * 		1			YEAR
+ * 		2			MONTH
+ * 		3			DAY
+ * 			 		
+ * @param component
+ * @return
+ */
 public int get(int component)
 {
 	int value=calendar.get(component);
