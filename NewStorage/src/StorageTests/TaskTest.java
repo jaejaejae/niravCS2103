@@ -1,11 +1,11 @@
 package StorageTests;
-import Storage.Task;
+import data.Task;
 import static org.junit.Assert.*;
 
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-import Storage.DateTime;
+import data.DateTime;
 public class TaskTest {
 	DateTime start=new DateTime(2012,5,30);
 	DateTime end=new DateTime(2012,5,30);

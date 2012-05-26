@@ -1,4 +1,4 @@
-package Storage;
+package data;
 import java.util.ArrayList;
 
 public class TaskArrayList 
@@ -7,7 +7,7 @@ ArrayList<Task> arrayList;
 
 public TaskArrayList()
 {
-	arrayList=new ArrayList();
+	arrayList=new ArrayList<Task>();
 }
 public void addTask(Task taskToBeAdded)
 {

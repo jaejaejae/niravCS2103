@@ -1,4 +1,6 @@
-package Storage;
+package storagecontroller;
+import data.Task;
+import data.TaskHashMap;
 import java.beans.XMLDecoder;
 import java.beans.XMLEncoder;
 import java.io.BufferedInputStream;

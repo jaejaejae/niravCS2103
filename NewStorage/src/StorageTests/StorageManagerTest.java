@@ -9,9 +9,9 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-import Storage.DateTime;
-import Storage.Task;
-import Storage.StorageManager;
+import data.DateTime;
+import data.Task;
+import storagecontroller.StorageManager;
 public class StorageManagerTest {
 	
 	StorageManager manager=new StorageManager();

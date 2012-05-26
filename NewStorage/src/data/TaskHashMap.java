@@ -1,4 +1,4 @@
-package Storage;
+package data;
 
 import java.util.Map;
 import java.util.Random;

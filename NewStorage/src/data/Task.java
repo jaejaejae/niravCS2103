@@ -1,4 +1,4 @@
-package Storage;
+package data;
 
 import java.util.List;
 
@@ -13,7 +13,7 @@ public class Task {
 	private boolean completed;
 	private boolean important;
 	private boolean deadline;
-	private List labels;
+	private List<String> labels;
 	private String recurring;
 
 public Task()

@@ -5,7 +5,7 @@ import static org.junit.Assert.*;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-import Storage.DateTime;
+import data.DateTime;
 public class DateTimeTest {
 
 	DateTime yesterday=new DateTime(2012,5,25);
