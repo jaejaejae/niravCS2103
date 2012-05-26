@@ -162,6 +162,14 @@ public boolean isEqual(Object to) {
 	compareToObjString = compareTo.toString();
 	return thisObjString.equals(compareToObjString);
 }
+public boolean isIdenticalTo(Task second)
+{
+	if(this.description==second.description && this.name==second.name && 
+			this.end==second.end && this.start==second.start && this.recurring==second.recurring && this.taskId==second.taskId)
+		return true;
+	else
+		return false;
+}
 /** mark the Task as important or unimportant*/
 public void toggleImportant()
 {

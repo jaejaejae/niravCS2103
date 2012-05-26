@@ -23,6 +23,13 @@ public class TaskTest {
 		DateTime start1=new DateTime(2012,5,31);
 		one.setEndDateTime(start1);
 	}
+	
+	@Test
+	public final void testIsIdenticalTo()
+	{
+		Task two=new Task("Vacations","in India",start,end,"yearly");
+		assertEquals(true,two.isIdenticalTo(one));
+	}
 
 	@Test
 	public final void testIsEqual() {
