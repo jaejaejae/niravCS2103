@@ -36,6 +36,11 @@ public class DateTimeTest {
 	public final void testIsDefaultTime() {
 		assertEquals(false,yesterday.isDefaultTime());
 	}
+	@Test
+	public final void testGetDate()
+	{
+		System.out.println(yesterday.generateDateCode());
+	}
 
 	@Test
 	public final void testSetIntInt() {
