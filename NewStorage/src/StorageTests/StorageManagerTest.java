@@ -59,13 +59,12 @@ public class StorageManagerTest {
 
 	@Test
 	public final void testGetTaskById() {
-		manager.addTask(one);
-		assertEquals(one,manager.getTaskById(one.getTaskId()));
 	}
 
 	@Test
 	public final void testLoadFile() {
-		
+		manager.addTask(one);
+		manager.loadFile();
 	}
 
 	@Test
