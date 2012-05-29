@@ -8,7 +8,7 @@ import org.junit.Test;
 import data.DateTime;
 public class DateTimeTest {
 
-	DateTime yesterday=new DateTime(2012,5,25);
+	DateTime yesterday=new DateTime(2012,1,25);
 	@Before
 	public void setUp() throws Exception {
 	}
@@ -37,15 +37,18 @@ public class DateTimeTest {
 		assertEquals(false,yesterday.isDefaultTime());
 	}
 	@Test
-	public final void testGetDate()
-	{
+	public final void testGetDate(){
 		System.out.println(yesterday.generateDateCode());
 	}
 
 	@Test
 	public final void testSetIntInt() {
-		yesterday.set(1,2011);
+		yesterday.set(1, 2011);
 		assertEquals("25-05-2011",yesterday.getDate().formattedToString());
+	}
+	@Test 
+	public final void testPresentableToString(){
+		assertEquals("25 May '12",yesterday.getDate().presentableToString());
 	}
 
 }

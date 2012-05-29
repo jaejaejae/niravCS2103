@@ -33,7 +33,7 @@ public class TaskHashMapTest {
 	TaskHashMap test=new TaskHashMap();
 	test.addTask(first);
 	test.deleteTaskById(first.getTaskId());
-	assertEquals(0,test.getKeySet().size());
+	assertEquals(0 , test.getKeySet().size());
 	}
 
 	@Test

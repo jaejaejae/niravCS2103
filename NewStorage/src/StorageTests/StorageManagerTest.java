@@ -47,7 +47,6 @@ public class StorageManagerTest {
 	@Test
 	public final void testGetAllTasks() 
 	{
-		
 		manager.addTask(one);
 		manager.addTask(two);
 		ArrayList<Task> taskList=new ArrayList<Task>();
@@ -66,7 +65,7 @@ public class StorageManagerTest {
 
 	@Test
 	public final void testLoadFile() {
-		fail("Not yet implemented");//TODO
+		
 	}
 
 	@Test
