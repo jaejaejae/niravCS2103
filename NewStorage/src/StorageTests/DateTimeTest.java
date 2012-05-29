@@ -8,7 +8,7 @@ import org.junit.Test;
 import data.DateTime;
 public class DateTimeTest {
 
-	DateTime yesterday=new DateTime(2012,1,25);
+	DateTime yesterday=new DateTime(2012,1,25,4,30);
 	@Before
 	public void setUp() throws Exception {
 	}
@@ -48,7 +48,7 @@ public class DateTimeTest {
 	}
 	@Test 
 	public final void testPresentableToString(){
-		assertEquals("25 May '12",yesterday.getDate().presentableToString());
+		assertEquals("25 May '12 4:30 AM",yesterday.presentableToString());
 	}
 
 }
